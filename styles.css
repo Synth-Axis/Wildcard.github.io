@@ -422,8 +422,7 @@ footer{
 
 .grid_raiders {
     display: grid; 
-    grid-template-columns: 49% 1fr;
-    
+    grid-template-columns: 47% 1fr;
     grid-gap: 2rem;
     
 }
