@@ -413,11 +413,17 @@ footer{
     border-radius: 4px;
     cursor: pointer;
     display: block;
-    border: 2px solid #4EB1BA;
+    border: 2px solid rgb(78, 177, 186);
     box-sizing: border-box;
     align-self: center;
 }
 
+.article_button:hover{
+    color: rgba(255, 255, 255, 1);
+    /* box-shadow: 0 5px 15px rgba(78, 177, 186, .4); */
+    box-shadow: 0 5px 15px rgba(138, 123, 90, .4);
+    transition: 0.2s ease;
+}
 
 
 .grid_raiders {
@@ -431,7 +437,7 @@ footer{
     display: grid; 
     grid-template-columns: 40% 1fr;
     grid-gap: 0.2rem;
-    border-color: #8a7b5a;
+    border-color: rgb(138, 123, 90);
     /* #303030; Dark Grey*/
     /* Grey */
 
