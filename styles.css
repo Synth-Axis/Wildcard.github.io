@@ -319,14 +319,14 @@ footer{
     padding-left: 15px;
     padding-right: 15px;
     display: grid; 
-    grid-template-columns: 73% 1fr;
+    grid-template-columns: 75% 1fr;
     grid-gap: 2rem;
 }
 
 .grid_innerwrp1row {
     display: grid; 
-    grid-template-columns: 65% 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: 45% 1fr;
+    grid-gap: 0.2rem;
     border-color: #8a7b5a;
     /* Grey */
     border-style: solid;
@@ -337,8 +337,8 @@ footer{
 
 .grid_innerwrp1row_middle {
     display: grid; 
-    grid-template-columns: 1fr 65%;
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 45%;
+    grid-gap: 0.2rem;
     border-color: #8a7b5a;
     border-style: solid;
     border-width: 1px;
@@ -350,7 +350,6 @@ footer{
 
 .grid_innerwrp1row p{
     word-break:normal;
-    margin-right: 1rem;
     
 }
 
@@ -358,7 +357,7 @@ footer{
 .flex_column{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 
@@ -371,28 +370,32 @@ footer{
 
 
 .image{
-    height: 350px;
     border-radius:10px;
+    display: block;
+    width: 100%;
+    height: auto;
     
 }
 
 
 .article_summary{
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     align-items: center;
     display:flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .article_summary_middle{
-    margin-left: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     align-items: center;
     display:flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 
@@ -412,22 +415,23 @@ footer{
     display: block;
     border: 2px solid #4EB1BA;
     box-sizing: border-box;
+    align-self: center;
 }
 
 
 
 .grid_raiders {
     display: grid; 
-    grid-template-columns: 50% 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 49% 1fr;
+    
     grid-gap: 2rem;
     
 }
 
 .grid_innerwrpraiders {
     display: grid; 
-    grid-template-columns: 45% 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 0.2rem;
     border-color: #8a7b5a;
     /* #303030; Dark Grey*/
     /* Grey */
@@ -438,7 +442,8 @@ footer{
 }
 
 .raiders_summary{
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     align-items: center;
     display:flex;
     flex-direction: column;
@@ -571,45 +576,6 @@ footer{
   }
 
 
-.fade1{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 700px, #222930 0),url(Media/RTWF-Sepulcher.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain; 
-}
-
-.fade2{
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0, #222930 600px, #222930 0),url(Media/RTWF-Sancum.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-    background-position: right; 
-     
-}
-
-.fade3{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 650px, #222930 0),url(Media/RTWF-Castle-Nathria.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain; 
-     
-}
-
-.fade4{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 300px, #222930 0),url(Media/Astromar1.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
-.fade5{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 300px, #222930 0),url(Media/Jahel1.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
-.fade6{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 300px, #222930 0),url(Media/Haladorina1.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
 .fade7{
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 250px, #222930 0),url(Media/synthaxis.jpg) no-repeat;
     background-size: 100%;
@@ -661,3 +627,26 @@ footer{
     box-shadow: 8px 8px 8px 8px rgba(68, 68, 68, 0.2);
 }
 
+.container {
+    position: relative;
+}
+
+.fade_right {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #22293000 30%,#222930 95%);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.fade_left {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #22293000 30%,#222930 95%);
+    position: absolute;
+    border-radius: 10px;
+}
