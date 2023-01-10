@@ -588,30 +588,6 @@ footer{
     object-fit: cover;
   }
 
-.fade10{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 250px, #222930 0),url(Media/synthaxisbw.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
-.fade11{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 250px, #222930 0),url(Media/alexa2bw.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
-.fade12{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #222930 250px, #222930 0),url(Media/xristias2bw.jpeg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
-.fade13{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgb(34, 41, 48) 280px, #222930 0),url(Media/Perkypug.jpg) no-repeat;
-    background-size: 100%;
-    background-size: contain;
-}
-
 .pop_out {
         transition: 0.25s;
       }
@@ -643,4 +619,13 @@ footer{
     background: linear-gradient(to left, #22293000 30%,#222930 100%);
     position: absolute;
     border-radius: 10px;
+}
+
+
+.footer_menu a{
+    transition: 0.25s;
+}
+
+.footer_menu a:hover{
+    font-weight: bolder;
 }
