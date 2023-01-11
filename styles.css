@@ -678,9 +678,6 @@ footer{
     
 }
 
-nav ul li.nav_items{
-    transition: all 0.1s ease;
-}
 
 nav ul li.nav_items:hover{
 transform: translateY(-1px) scale(1.02);
