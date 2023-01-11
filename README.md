@@ -2,7 +2,7 @@
 
 11-01-2023
   1. Nav rework with Neon Glow
-  2. Added Neon Glow pop outs w/0 border
+  2. Added Neon Glow pop outs with light spill
   3. Added "button pressed" animation.
   3. Added Navigation Scalling to Nav and Footer
 
