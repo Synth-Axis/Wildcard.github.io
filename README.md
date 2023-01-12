@@ -1,5 +1,9 @@
 # synth-axis.github.io
 
+12-01-2023
+  1. News Content re-styled
+  2. Added Slidding content on page-load
+
 11-01-2023
   1. Nav rework with Neon Glow
   2. Added Neon Glow pop outs with light spill
