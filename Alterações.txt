@@ -1,0 +1,7 @@
+Small pages -> Shrink to be non scrolable
+Streams -> Streamers
+
+
+wildcard on hover, flip a card -> replace Wildcard word / make it shine
+hovering on players photos on index changes to the person photo
+
