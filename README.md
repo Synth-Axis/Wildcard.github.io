@@ -1,11 +1,14 @@
 # synth-axis.github.io
 
+14-01-2023
+  1. Added sliding up content on page-load
+
 13-01-2023
-  1. Added slidding from TOP
+  1. Added slidding down content on page-load
 
 12-01-2023
   1. News Content re-styled
-  2. Added Slidding content on page-load
+  2. Added Slidding right content on page-load
 
 11-01-2023
   1. Nav rework with Neon Glow
