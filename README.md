@@ -1,5 +1,8 @@
 # synth-axis.github.io
 
+13-01-2023
+  1. Added slidding from TOP
+
 12-01-2023
   1. News Content re-styled
   2. Added Slidding content on page-load
