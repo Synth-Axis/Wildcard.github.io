@@ -2,7 +2,6 @@ html {
     line-height: 1.15;
   }
 
-
 body {
     max-width: 1700px;
     background-color: rgb(34, 41, 48);
@@ -23,15 +22,38 @@ h1{
     letter-spacing: .08em;
 }
 
+.flex_end{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.flex-box-nav{
+    display:flex;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.titles_text_shadow{
+    text-shadow: 8px 8px 8px #000000;
+    color:#8a7b5a;
+}
+
+.word_box_shadow{
+    box-shadow: 6px 6px 10px #000000;
+}
+
 .navigation {
     background-color: rgb(44, 54, 62);
     display: flex;
     height:3em;
     align-items: center;
-    justify-content: center;
-    box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
-                -1px -2px 25px hsl(180deg 25% 25%);
+    justify-content: center;   
+    /* box-shadow: 2px 4px 200px 10px hsl(180deg 100% 50% / 70%), 
+                -1px -2px 25px hsl(180deg 25% 25%); */
 
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%), -4px -8px 500px 25px hsl(180deg 100% 50% / 70%);
     /* box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7); */
     
     border-radius: 6px;
@@ -67,6 +89,10 @@ h1{
 .text_blue{
     color:rgba(0,255,255,0.9);
     /* #4EB1BA; */
+}
+
+.text_gold{
+    color:#8a7b5a;
 }
 
 .text_primary {
@@ -401,6 +427,13 @@ footer{
     padding-left:15px;
 }
 
+.flex_columnzero{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+
 
 .flex_item{
     margin-bottom: 1rem;
@@ -457,6 +490,7 @@ footer{
     color: #E9E9E9;
     padding: 6px 15px;
     background: rgba(0, 255, 255, 0.7);
+    border: 0px;
     border-radius: 4px;
     cursor: pointer;
     display: block;
@@ -689,7 +723,6 @@ footer{
 .footer_menu a:hover{
     font-weight: bolder;
     font-size: large;
-    
 }
 
 .nav_items{
@@ -709,9 +742,7 @@ transform: translateY(-1px) scale(1.02);
     margin: 20px 0;
     width:calc(100% - 2rem);
     display:flex;
-    align-items: center;
-    justify-content: center;
-    
+    align-items: center;  
     
     /* border-color: #8a7b5a;
     border-style: solid;
@@ -724,9 +755,7 @@ transform: translateY(-1px) scale(1.02);
     margin: 20px 0;
     width:calc(100% - 2rem);
     display:flex;
-    align-items: center;
-    justify-content: center;
-    
+    align-items: center;  
     
     /* border-color: #8a7b5a;
     border-style: solid;
@@ -736,52 +765,101 @@ transform: translateY(-1px) scale(1.02);
 
 .news_img{
     position: relative;
-    max-width: 100%;
+    max-width: 75%;
     border-radius: 6px;
-    box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
-                -1px -2px 25px hsl(180deg 25% 25%);
-    z-index: 1;
+    /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
+    -1px -2px 25px hsl(180deg 25% 25%); */
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%);/*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
+    z-index: 0;
 
 }
 
 .news_img_middle{
     position: relative;
-    max-width: 100%;
-    border-radius: 6px; 
-    box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
-                -1px -2px 25px hsl(180deg 25% 25%);
-    z-index: 1;
-
+    max-width: 56%;
+    border-radius: 6px;
+    /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
+    -1px -2px 25px hsl(180deg 25% 25%); */
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%);/*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
+    z-index: 0;   
 }
 
 .news_summary{
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
     padding: 0 1em;
     text-align: center;
-    align-items: center;
-    background-color: rgba(43, 52, 60, 1);
+    /* align-items: center; */
+    background-color: rgba(43, 52, 60, 0.8);
     border-radius: 6px;
-    box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%);
-    z-index: 2;
-    margin-left: -4em;
+    /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%); */
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%); /*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
+    z-index: 1;
+    left: 550px;
 }
 
 .news_summary_middle{
     display: flex;
     flex-direction: column;
-    width:40em;
-    position: relative;
+    /* width:40em; */
+    position: absolute;
     padding: 0 1em;
     text-align: center;
-    align-items: center;
-    background-color: rgba(43, 52, 60, 1);
+    /* align-items: center; */
+    background-color: rgba(43, 52, 60, 0.8);
     border-radius: 6px;
-    margin-right: -3.5em;
-    box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%);
-    z-index: 2;
+    /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%); */
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%); /*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
+    z-index: 1;
+    right:550px;
+
+    
 }
+
+.form_application{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 1em;
+    border: 0px;
+    border-radius: 12px;
+    padding: 0em 1em;
+    box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%); /*, -4px -8px 5px hsl(180deg 100% 50% / 70%) */
+    /* box-shadow: 30.03px 30.03px 29px hsl(184, 38%, 33%), -30.03px -30.03px 29px hsl(180, 100%, 80%); */
+    
+}
+
+.form_fieldsets{
+    border: 1px solid #8a7b5a;
+    border-radius: 6px;
+    display: flex;
+    margin: 1em 0;
+}
+
+.form_fieldsets input, textarea{
+    background-color: rgb(43, 52, 60);
+    color: white;
+}
+
+.form_terms{
+    grid-row: span 3;
+}
+
+.form_buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form_buttons input{
+    margin: 1em 0.5em 1em 1em;
+
+}
+
+label{
+    padding-top: 0.5em;
+}
+
 
 .slide_right{
     overflow:visible;
@@ -858,24 +936,23 @@ transform:translateY(-500%);
 }
 
 .slide_up > div:nth-child(1){
-    animation: 1s slide_down 0.5s forwards;
-    transform:translateY(500%);
+animation: 1s slide_down 0.5s forwards;
+transform:translateY(500%);
 }
-    
+
 .slide_up > div:nth-child(2){
     animation: 1s slide_down 1s forwards;
     transform:translateY(500%);
-}
+    }
 
 .slide_up > div:nth-child(3){
-    animation: 1s slide_right 1.5s forwards;
+    animation: 1s slide_down 1.5s forwards;
     transform:translateY(500%);
 }
 
+
 @keyframes slide_up {
     to {
-      transform:translateY(0);
-      
-      
+      transform:translateY(0);      
     }
-  }
+}

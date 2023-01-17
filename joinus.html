@@ -76,50 +76,103 @@
 
             <section class="main_outwrp flex_column slide_right">
                 <div>
-                    <h1 class="text_primary_title"><span class="word_box">JOIN</span> <span style="color:#8a7b5a">US</span></h1>
+                    <h1 class="text_primary_title"><span class="word_box word_box_shadow">JOIN</span> <span class="titles_text_shadow">US</span></h1>
                 </div>
                 
                 <div>
-                    <article class="text_primary">
+                    <article class="text_primary_strong">
                         <p>Do you have what it takes to join our Ranks? - Fill out the form and drop your application below.</p>
                     </article>
                 </div>
-                <div>
-                    <p>Please Note: Applicants <b>MUST</b> be in our Official Discord <a><em>(https://discord.gg/GxTTmXwHHk)</em></a> to be interviewed and accepted</p>
+                <div class="text_primary">
+                    <p><strong>Please Note</strong>: Applicants <b>MUST</b> be in our Official Discord <a href="https://discord.gg/GxTTmXwHHk"><em><strong class="text_blue">(https://discord.gg/GxTTmXwHHk)</strong></em></a> to be interviewed and accepted.</p>
                     <p>We are currently only accepting players with main characters on EU-Servers and CET -1/+1.</p>
                 </div>    
                 
             
 
-            <section class="main_outwrp flex_column">
-                <form action="">
-                    <label for="username">Username/Nickname</label>
-                    <input type="text" id="username" name="username" minlength="3" required>
+            <section class="main_outwrp">
+                <form id="player_form"action="" class="form_application">
 
-                    <label for="discordname">Discord Name</label>
-                    <input type="text" id="discordname" name="discordname" minlength="3" required>
+                    <div>
+                        <fieldset class="form_fieldsets">
+                            <legend class="title-primary"><span class="text_gold">User Information</span></legend>
+                                <div class="flex_column text_primary">
+                                    <label for="username">Username/Nickname</label>
+                                    <input type="text" id="username" name="username" placeholder="Enter your User/Nick name" minlength="3" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" minlength="3" required>
+                                    <label for="discordname">Discord Name</label>
+                                    <input type="text" id="discordname" name="discordname" placeholder="Enter your Discord name/ID" minlength="3" required>
 
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your E-mail" minlength="3" required>
+                                </div>    
+                        </fieldset>
 
-                    <label for="characters">Main Character Name/Server (link your Raider.io)</label>
-                    <input type="text" id="characters" name="characters" minlength="3">
+                        <fieldset class="form_fieldsets">
+                            <legend class="title-primary"><span class="text_gold">Character Information</span></legend>
+                            <div class="flex_column text_primary">
+                                <div>
+                                    <label for="faction">Faction</label>
+                                </div>
+                                <div>    
+                                    <input type="radio" id="faction" name="faction" value="0">Alliance
+                                    <input type="radio" id="faction" name="faction" value="1">Horde
+                                </div>  
+                                
+                                <div>
+                                    <label for="role">Role</label>
+                                </div>
+    
+                                <div>
+                                    <input type="radio" id="role" name="role" value="0">Tank
+                                    <input type="radio" id="role" name="role" value="1">Healer
+                                    <input type="radio" id="role" name="role" value="2">DPS
+                                </div>
+    
+                                <label for="characters">Main Character Name/Server</label>
+                                <input type="text" id="characters" name="characters" placeholder="Enter your WoW character's name" minlength="3" >
 
-                    <label for="faction">Faction</label>
-                    <input type="faction" id="faction" name="firstname" minlength="3">
+                                <label for="rio">Link for your Main's<em> Raider.io</em></label>
+                                <input type="rio" id="rio" name="rio" placeholder="https:\\raider.io\..." minlength="3" >
 
+                            </div>   
+                        </fieldset>
 
-                    <label for="lastname">Experience</label>
-                    <input type="text" id="lastname" name="lastname" minlength="3" maxlength="2500">
-                    <p>Tell us about your Mythic Dungeon & Raid experience as well as your starting Expansion</p>
+                        <fieldset class="form_fieldsets">
+                            <legend class="title-primary"><span class="text_gold">Experience</span></legend>
+                            <div class="flex_column text_primary">
+                                <label for="experience">Tell us about your Mythic Dungeon & Raid experience as well 
+                                    as your starting Expansion</label>
+                                <textarea id="experience" name="experience" form="player_form" placeholder="Summarise your exprience with Mythic Dungeons and Raids since you started to play"  minlength="200"></textarea>
+                            </div>                        
+                        </fieldset>
+
+                    </div>
+
                     
-                    
+                    <div>
+                        <fieldset class="form_fieldsets form_terms">
+                        <legend class="title-primary"><span class="text_gold">Terms & Conditions</span></legend>
+                            <div class="text_primary">
+                                <p style="margin:0;">As a member of Wildcard you are required not to disclose any business or game strategies with any individuals or organizations outside Wildcard and Wildcard Esports.</p>
+                                <p>You understand that everyone is equal regardless of their position inside the organization.</p>
+                                <p>Wildcard and Wildcard Esports will not tolerate any sort of unfriendly or discriminatory behaviour towards other members, partners, fans/supporters and players 
+                                    outside the team.</p>
+                                <p>Do you agree to these Terms & Conditions?</p>
+                                
+                                    
+                                <input type="radio" id="terms" name="terms" value="0">Yes
+                                <input type="radio" id="terms" name="terms" value="1">No
+                            </div>
+                        </fieldset>
 
+                        <div class="form_buttons">
+                            <input class="article_button" type="submit" value="Submit Application">
+                            <input class="article_button" type="reset" value="Reset Form">
+                        </div>
+                    </div>
 
-
-
-                    <input type="submit" value="Send Request" />
                 </form>
             </section>
 
@@ -182,13 +235,18 @@
                     </li>
                     <li class="text_primary">Store</li>
                     
-                    <li class="text_primary">Partners</li>
-                    <li class="text_primary">Streams</li>
+                    <li class="text_primary">
+                        <a class="test" href="partners.html">Partners</a>
+                    </li>
+                    <li class="text_primary">
+                        <a class="test" href="streams.html">Streams</a>
+                    </li>
                     <li class="text_primary">
                         <a href="team.html">Team</a>
                     </li>
-                    <li class="text_primary">Join Us</li>
-                    <li class="text_primary">Login</li>
+                    <li class="text_primary">
+                        <a class="test" href="joinus.html">Join Us</a>
+                    </li>
                 </ul>     
 
                 <ul type="none" class="text_primary_strong">RESOURSES
