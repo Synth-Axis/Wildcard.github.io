@@ -1,5 +1,12 @@
 # synth-axis.github.io
 
+17-01-2023
+  1. Added Text shadows
+  2. Changed News box shadows for elevation
+  3. Navigation Menu light showers down
+  4. Changed Navigation Logo with guildname
+  5. Added Join us page with Form.
+
 14-01-2023
   1. Added sliding up content on page-load
 
