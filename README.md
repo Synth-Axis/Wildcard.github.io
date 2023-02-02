@@ -1,4 +1,4 @@
-# synth-axis.github.io
+# [synth-axis.github.io](https://synth-axis.github.io/Wildcard.github.io/)
 
 17-01-2023
   1. Added Text shadows
