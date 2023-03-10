@@ -35,9 +35,11 @@ body {
 
 header {
     position: fixed;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100px;
-    padding: 24px 0 24px 0;
+    height: 7rem;
+    padding: 1.5rem 0 0 0;
     top: 0;
     left: 0;
     backdrop-filter: blur(8px);
@@ -68,7 +70,8 @@ a:any-link{
     font-family: source sans pro,sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     line-height: 1.3rem;
     letter-spacing: .1em;
 }
@@ -76,7 +79,7 @@ a:any-link{
 .text_primary_strong {
     font-family: source sans pro,sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
     line-height: 1.3rem;
     letter-spacing: .1em;
 }
@@ -101,7 +104,8 @@ a:any-link{
 .title-primary {
     font-family: montserrat,sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 28px;
     letter-spacing: .02em;
     color: #E9E9E9;
@@ -110,7 +114,8 @@ a:any-link{
 .standard-sectionTitle {
     font-family: montserrat,sans-serif;
     font-weight: 600;
-    font-size: 1.75rem;
+    /* font-size: 1.75rem; */
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
     line-height: 32px;
     letter-spacing: .09em;
     color: #E9E9E9;
@@ -225,9 +230,6 @@ a:any-link{
     line-height: 1.5em;
 }
 
-.margin-2rem{
-    margin: 0 2rem;
-}
 
 .margin-top-halfRem{
     margin-top: 0.5rem;
@@ -249,12 +251,15 @@ a:any-link{
 .outer_wrp_nav{
     max-width: 1700px;
     height: 100%;
-    margin: 0 auto;
-    padding: 0 2.5rem;
+    width: 100%;
     display: flex;
     place-content: center space-between;
     align-items: center;
     box-sizing: border-box;
+    margin: 0 1rem;
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 4px 8px 8px 1px hsl(0deg 0% 0%), -4px -8px 16px hsl(180deg 100% 50% / 71%);
 }
 
 .flex-box-nav-logo{
@@ -267,12 +272,12 @@ a:any-link{
 .navigation {
     height:3em;
     margin: 0 2rem;
-    background-color: rgba(44, 54, 62, 0.7);
+    /* background-color: rgba(44, 54, 62, 0.7); */
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;  
-    box-shadow: 4px 8px 8px 1px hsl(0deg 0% 0%), -4px -8px 16px hsl(180deg 100% 50% / 71%);
+    /* box-shadow: 4px 8px 8px 1px hsl(0deg 0% 0%), -4px -8px 16px hsl(180deg 100% 50% / 71%); */
     
     /* box-shadow: 2px 4px 200px 10px hsl(180deg 100% 50% / 70%), 
                 -1px -2px 25px hsl(180deg 25% 25%); */
@@ -310,10 +315,43 @@ a:any-link{
     text-align: center; 
 }
 
-nav ul li a:hover{
-    transform: translateY(-1px); /* convert to onclick */
+/*
+.nav ul li a:hover{  
+    transform: translateY(-1px); convert to onclick
     color: rgba(0,255,255,0.9);
+} 
+*/
+
+
+
+.nav-link{
+    display: inline-block;
+    position: relative;
 }
+
+
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    border-radius: 0.5rem;
+    transition: 250ms;
+    height: 0.3rem;   
+    left: 50%;
+    background-color: rgba(0,255,255,0.9);
+    box-shadow: 6px 6px 10px #000000;
+    transition: all 0.250s;
+  }
+  
+  .nav-link-underline::before {
+    width: 0%;
+    bottom: -0.5rem;
+  }
+  
+  .nav-link-underline:hover::before {
+    width: 100%;
+    left: 0;
+  }
 
 .socials-nav{
     display: grid;
@@ -360,7 +398,9 @@ nav ul li a:hover{
 }
 
 .footer_menu{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     align-items: flex-start;
 }
 
@@ -392,6 +432,15 @@ nav ul li a:hover{
     font-weight: bolder;
     font-size: 1.1rem;
 }
+
+#hi_form .form-experience-span{
+    grid-column: span 2;
+}
+
+#form-hi-buttons-span {
+    grid-column: span 2;
+}
+
 
 /* ------------------------------------------------------------------------- */
 
@@ -502,8 +551,9 @@ li::marker{
 /* BUTTONS */
 
 .article_button{
-    font-size: 1rem;
     font-family: montserrat,sans-serif;
+    /* font-size: 1rem; */
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     letter-spacing: .04em;
     padding: 1em;
     background:  rgba(44, 54, 62, 0.6);
@@ -513,6 +563,7 @@ li::marker{
     cursor: pointer;
     box-sizing: border-box;
     align-self: center;
+    text-align: center;
     box-shadow: 0px 0px 15px 5px rgb(26 26 26), 0px 8px 0px 0px rgb(26 26 26), 0px 10px 15px 0px rgb(26 26 26);
 }
 
@@ -684,8 +735,14 @@ transition:transform 0.2s linear;
     border-radius: 6px;
     box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%);/*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
     z-index: 0;
+    transition: all 0.250s ease;
     /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
     -1px -2px 25px hsl(180deg 25% 25%); */
+}
+
+.news_img:hover{
+    z-index:2;
+    transform: scale(1.1);
 }
 
 .news_img_middle{
@@ -695,9 +752,16 @@ transition:transform 0.2s linear;
     box-shadow: 4px 8px 20px 5px hsl(180deg 100% 0% / 100%);/*, -4px -8px 5px hsl(180deg 100% 50% / 70%)*/
     z-index: 0;
     left: 30%;   
+    transition: all 0.250s ease;
     /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), 
     -1px -2px 25px hsl(180deg 25% 25%); */
 }
+
+.news_img_middle:hover{
+    z-index:2;
+    transform: scale(1.1);
+}
+
 
 .news_summary{
     width: 50%;
@@ -875,8 +939,12 @@ transition:transform 0.2s linear;
 
 /* FORMS */
 
-#formJoinUs, #formPartnership {
+#formJoinUs, #formPartnership, #formSayHi {
     display: none;
+}
+
+#formPartnership select{
+    width: 100%;
 }
 
 
@@ -921,6 +989,13 @@ transition:transform 0.2s linear;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4em;
+}
+
+#hi_form{
+        margin: 4rem 4rem 0 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4em;
 }
 
 .grid-col-span2{
@@ -1213,6 +1288,17 @@ transform:translateY(500%);
 }
 
 @media screen and (max-width:1440px)  {
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    nav ul li{
+        place-content: center;
+        
+    }
+    
     .news-grid{
         grid-template-columns: 1fr;
     }
@@ -1269,7 +1355,7 @@ transform:translateY(500%);
 
     .news_summary{
         position: relative;
-        width: 100%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         padding: 1em 1em;
@@ -1277,6 +1363,7 @@ transform:translateY(500%);
         background-color: rgba(34, 41, 48, 0.5);
         border-radius: 6px;
         right:0;
+        margin-top: -6rem;
         z-index: 1;
         box-shadow: 0px 0px 15px 2px hsl(180deg 100% 0% / 100%);
          /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%); */
@@ -1287,7 +1374,7 @@ transform:translateY(500%);
 
     .news_summary_middle{
         position: relative;
-        width: 100%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         padding: 1em 1em;
@@ -1296,6 +1383,7 @@ transform:translateY(500%);
         border-radius: 6px;
         right:0;
         left:0;
+        margin-top: -6rem;
         z-index: 1;
         box-shadow: 0px 0px 15px 2px hsl(180deg 100% 0% / 100%);
          /* box-shadow: 2px 4px 5px hsl(180deg 100% 50% / 70%), -1px -2px 25px hsl(180deg 25% 25%); */
@@ -1364,20 +1452,9 @@ transform:translateY(500%);
 
 @media screen and (max-width:992px)  {
     
-    .navigation{
+    /* .navigation{
         height: 5rem;
-    }
-
-    nav ul{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-
-    nav ul li{
-        place-content: center;
-        
-    }
+    } */
 
     .page-title{
         display: flex;
@@ -1444,7 +1521,7 @@ transform:translateY(500%);
     }
 
 
-    .player-item{
+    .player-item, .raider-item{
         flex-direction: column;
     }
 
@@ -1484,12 +1561,19 @@ transform:translateY(500%);
         grid-column: span 1;
     }
 
+    #hi_form{
+        grid-template-columns: 1fr;
+
+}
+
     .footer-inner-wrapper{
         flex-direction: column;
     }
 
     .footer_menu{
         margin-top: 2rem;
+        grid-template-columns: repeat(3, 22%);
+        gap: 1rem;
     }
 
 }
@@ -1530,8 +1614,16 @@ transform:translateY(500%);
         border: none;
     }
 
+    #form-hi-buttons-span {
+        grid-column: span 1;
+    }
+
     .form_buttons{
         flex-direction: column;
+    }
+
+    #hi_form .form-experience-span {
+        grid-column: span 1;
     }
 
     .partners_logos {
@@ -1552,7 +1644,9 @@ transform:translateY(500%);
     }  
 
     .footer_menu{
-        flex-wrap: wrap;
+            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
     }
 
     .footer_menu ul{

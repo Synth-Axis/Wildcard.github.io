@@ -9,21 +9,30 @@ window.onbeforeunload = function () {
   const linkJoin = document.getElementById("showJoinUs");
 
   linkJoin.addEventListener("click", function(event) {
-      formPartner.style.display = "none";
-      event.preventDefault();
-      formJoin.style.display = "block";
+        formPartner.style.display = "none";
+        formHi.style.display = "none";
+        event.preventDefault();
+        formJoin.style.display = "block";
   });
 
   const formPartner = document.getElementById("formPartnership");
   const linkPartner = document.getElementById("showPartnership");
 
-  console.log("formPartnership");
-  console.log("showPartnership");
-
   linkPartner.addEventListener("click", function(event) {
-      formJoin.style.display = "none";
-      event.preventDefault();
-      formPartner.style.display = "block";
+        formJoin.style.display = "none";
+        formHi.style.display = "none";
+        event.preventDefault();
+        formPartner.style.display = "block";
+  });
+
+  const formHi = document.getElementById("formSayHi");
+  const linkHi = document.getElementById("showSayHi");
+
+  linkHi.addEventListener("click", function(event) {
+        formJoin.style.display = "none";
+        formPartner.style.display = "none";
+        event.preventDefault();
+        formHi.style.display = "block";
   });
 
 
